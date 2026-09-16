@@ -51,7 +51,7 @@
 
     <!-- Split-Screen Hero & Immediate Gallery -->
     <header class="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
             <!-- Left Side: Intro & Context -->
             <div class="relative z-10 order-2 lg:order-1">
@@ -96,15 +96,15 @@
         </div>
     </header>
 
-    <!-- NEW: Field Notes / Forum Section -->
-    <section id="forum" class="max-w-4xl mx-auto px-6 lg:px-12 py-24 border-t border-zinc-900">
-        <div class="flex items-center justify-between mb-12">
-            <h2 class="text-3xl font-serif text-white">Field Notes & Gear</h2>
-            <span class="text-xs tracking-widest uppercase text-zinc-600">Latest Updates</span>
-        </div>
+    <!-- MAIN CONTENT SPLIT: Forum (Left) & Gallery (Right) -->
+    <div class="max-w-[90rem] mx-auto px-6 lg:px-12 py-24 border-t border-zinc-900 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 relative">
+        
+        <!-- Left Side: Field Notes / Forum (Takes up 5 columns on desktop) -->
+        <section id="forum" class="lg:col-span-5 flex flex-col space-y-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-serif text-white">Field Notes & Gear</h2>
+            </div>
 
-        <div class="space-y-8">
-            
             <!-- Thread 1 -->
             <article class="bg-[#0a0a0a] border border-zinc-800 rounded-2xl p-6 lg:p-8 hover:border-zinc-600 transition">
                 <div class="flex items-center space-x-3 mb-4">
@@ -118,7 +118,6 @@
                 <p class="text-zinc-400 text-sm leading-relaxed mb-4">
                     Finally got the SmallRig cage dialed in on the X-M5. It adds just enough weight to balance out heavier glass without losing that compact form factor. I paired it with a minimalist rope strap—looks industrial, fits right in with some of my archival streetwear pieces. Taking this rig around Lat Phrao later today to test some new film simulation tweaks. 
                 </p>
-                <img src="https://images.unsplash.com/photo-1516961642265-531546e84af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Camera Rig" class="w-full h-64 object-cover rounded-xl border border-zinc-800 mb-4">
                 <div class="flex gap-2">
                     <span class="text-xs bg-zinc-900 text-zinc-400 px-2 py-1 rounded">#gear</span>
                     <span class="text-xs bg-zinc-900 text-zinc-400 px-2 py-1 rounded">#fujifilmxm5</span>
@@ -157,7 +156,6 @@
                 <p class="text-zinc-400 text-sm leading-relaxed mb-4">
                     Most people abandon Classic Neg when the sun goes down, but if you push the shadows to +1.5 and cool down the white balance (R: -2, B: +3), it handles neon street lights incredibly well. It gives this gritty, cinematic look that feels very raw. I’ve been using it exclusively for evening cafe shoots.
                 </p>
-                <img src="https://images.unsplash.com/photo-1555169062-013468b47731?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Night Photography" class="w-full h-64 object-cover rounded-xl border border-zinc-800 mb-4">
                 <div class="flex gap-2">
                     <span class="text-xs bg-zinc-900 text-zinc-400 px-2 py-1 rounded">#filmsimulation</span>
                     <span class="text-xs bg-zinc-900 text-zinc-400 px-2 py-1 rounded">#classicnegative</span>
@@ -195,114 +193,115 @@
                 <p class="text-zinc-400 text-sm leading-relaxed mb-4">
                     I used to rely heavily on standard monochrome, but switching my recipe base to Acros with a +G filter has completely changed how I look at contrast. It preserves skin tones beautifully while crushing the unnecessary mid-tones in the background. If you haven't built an Acros recipe yet, you are missing out on half the Fuji experience.
                 </p>
-                <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Black and White Car" class="w-full h-64 object-cover rounded-xl border border-zinc-800 mb-4 grayscale">
                 <div class="flex gap-2">
                     <span class="text-xs bg-zinc-900 text-zinc-400 px-2 py-1 rounded">#acros</span>
                     <span class="text-xs bg-zinc-900 text-zinc-400 px-2 py-1 rounded">#monochrome</span>
                 </div>
             </article>
+        </section>
 
-        </div>
-    </section>
+        <!-- Right Side: Complete Archive (Takes up 7 columns on desktop) -->
+        <section id="portfolio" class="lg:col-span-7 flex flex-col">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-serif text-white">Complete Archive</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Post 1 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
+                        <img src="photo1.jpg" alt="Urban Chrome" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-lg text-white">Urban Chrome</h3>
+                            <p class="text-sm text-zinc-500 mt-1">X-M4</p>
+                        </div>
+                        <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Chrome</span>
+                    </div>
+                </div>
 
-    <!-- Full Portfolio Section -->
-    <section id="portfolio" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 border-t border-zinc-900">
-        <h2 class="text-3xl font-serif mb-12 text-white">Complete Archive</h2>
+                <!-- Post 2 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
+                        <img src="photo2.jpg" alt="Night Walk" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-lg text-white">Night Walk</h3>
+                            <p class="text-sm text-zinc-500 mt-1">X-A1</p>
+                        </div>
+                        <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">CineStill 800T</span>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
+                        <img src="photo3.jpg" alt="Golden Hour" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-lg text-white">Golden Hour</h3>
+                            <p class="text-sm text-zinc-500 mt-1">X-M4</p>
+                        </div>
+                        <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Kodak Portra</span>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
+                        <img src="photo4.jpg" alt="Moody Greens" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-lg text-white">Moody Greens</h3>
+                            <p class="text-sm text-zinc-500 mt-1">X-M5</p>
+                        </div>
+                        <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Superia</span>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
+                        <img src="photo5.jpg" alt="Minimal Architecture" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-lg text-white">Minimal Architecture</h3>
+                            <p class="text-sm text-zinc-500 mt-1">X-A1</p>
+                        </div>
+                        <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Acros B&W</span>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
+                        <img src="photo6.jpg" alt="Cafe Shadows" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-lg text-white">Cafe Shadows</h3>
+                            <p class="text-sm text-zinc-500 mt-1">X-M4</p>
+                        </div>
+                        <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Neg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Post 1 -->
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo1.jpg" alt="Urban Chrome" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg text-white">Urban Chrome</h3>
-                        <p class="text-sm text-zinc-500 mt-1">X-M4</p>
-                    </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Chrome</span>
-                </div>
-            </div>
-
-            <!-- Post 2 -->
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo2.jpg" alt="Night Walk" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg text-white">Night Walk</h3>
-                        <p class="text-sm text-zinc-500 mt-1">X-A1</p>
-                    </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">CineStill 800T</span>
-                </div>
-            </div>
-
-            <!-- Post 3 -->
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo3.jpg" alt="Golden Hour" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg text-white">Golden Hour</h3>
-                        <p class="text-sm text-zinc-500 mt-1">X-M4</p>
-                    </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Kodak Portra</span>
-                </div>
-            </div>
-
-            <!-- Post 4 -->
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo4.jpg" alt="Moody Greens" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg text-white">Moody Greens</h3>
-                        <p class="text-sm text-zinc-500 mt-1">X-M5</p>
-                    </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Superia</span>
-                </div>
-            </div>
-
-            <!-- Post 5 -->
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo5.jpg" alt="Minimal Architecture" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg text-white">Minimal Architecture</h3>
-                        <p class="text-sm text-zinc-500 mt-1">X-A1</p>
-                    </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Acros B&W</span>
-                </div>
-            </div>
-
-            <!-- Post 6 -->
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo6.jpg" alt="Cafe Shadows" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
-                </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-semibold text-lg text-white">Cafe Shadows</h3>
-                        <p class="text-sm text-zinc-500 mt-1">X-M4</p>
-                    </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Neg</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div> <!-- End of Split Section -->
 
     <!-- Film Simulation Suggestions -->
     <section id="suggestions" class="bg-[#0a0a0a] py-24 border-t border-zinc-900">
-        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12 text-center">
             <h2 class="text-3xl font-serif mb-6 text-white">Current Recipe Suggestions</h2>
             <p class="text-zinc-500 mb-12">Signature configurations for the X-Series sensors.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
                 <div class="p-8 border border-zinc-800 bg-zinc-950 rounded-xl hover:border-chrome transition">
                     <h4 class="font-serif text-2xl mb-2 text-white">Everyday Negative</h4>
                     <p class="text-sm text-zinc-500 mb-4">Perfect for overcast days and urban environments.</p>
