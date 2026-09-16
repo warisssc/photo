@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORELTEX | Photography & Recipes</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        fujiRed: '#e52a2a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-900 antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full flex items-center justify-between px-6 lg:px-12 py-4 bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="flex items-center space-x-12">
+            <a href="#" class="text-xl font-bold tracking-widest text-black">CORELTEX.</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="#" class="hover:text-black transition">Recipes</a>
+                <a href="#" class="hover:text-black transition">Cameras</a>
+                <a href="#" class="hover:text-black transition">Gallery</a>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="https://instagram.com/coreltex" target="_blank" class="bg-fujiRed text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-red-700 transition shadow-sm">
+                Follow @coreltex
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- REPLACE background-image URL with one of your best photos -->
+    <header class="relative h-screen flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+        <!-- Dark overlay to make text pop like the reference image -->
+        <div class="absolute inset-0 bg-black/40"></div>
+        
+        <div class="relative z-10 px-6 lg:px-24 max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-serif text-white tracking-tight mb-4">Find your look.</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-light">
+                Discover custom Fujifilm recipes and visual stories. Shot entirely on X-M4, X-A1, and X-M5.
+            </p>
+            <div class="flex items-center space-x-4">
+                <a href="#gallery" class="bg-white text-black text-sm font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition shadow-lg">
+                    Explore Gallery
+                </a>
+                <a href="#suggestions" class="bg-fujiRed text-white text-sm font-semibold px-8 py-3 rounded-full hover:bg-red-700 transition shadow-lg">
+                    Film Suggestions
+                </a>
+            </div>
+            <p class="text-xs text-gray-300 mt-8 tracking-widest uppercase opacity-70">Built for Fujifilm Shooters</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section (6 Posts) -->
+    <section id="gallery" class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+        <h2 class="text-4xl font-serif text-center mb-16">Latest from Instagram</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Post 1 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5]">
+                    <!-- REPLACE SRC WITH YOUR INSTAGRAM PHOTO 1 -->
+                    <img src="https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coreltex Photo 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Urban Chrome</h3>
+                        <p class="text-sm text-gray-500 mt-1">Camera: Fujifilm X-M4</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 rounded text-gray-600">Classic Chrome</span>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5]">
+                    <!-- REPLACE SRC WITH YOUR INSTAGRAM PHOTO 2 -->
+                    <img src="https://images.unsplash.com/photo-1534067783941-51c568d29876?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coreltex Photo 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Night Walk</h3>
+                        <p class="text-sm text-gray-500 mt-1">Camera: Fujifilm X-A1</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 rounded text-gray-600">CineStill 800T</span>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5]">
+                    <!-- REPLACE SRC WITH YOUR INSTAGRAM PHOTO 3 -->
+                    <img src="https://images.unsplash.com/photo-1495106245177-55f53ab6e08b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coreltex Photo 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Golden Hour</h3>
+                        <p class="text-sm text-gray-500 mt-1">Camera: Fujifilm X-M4</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 rounded text-gray-600">Kodak Portra 400</span>
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5]">
+                    <!-- REPLACE SRC WITH YOUR INSTAGRAM PHOTO 4 -->
+                    <img src="https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coreltex Photo 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Moody Greens</h3>
+                        <p class="text-sm text-gray-500 mt-1">Camera: Fujifilm X-M5</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 rounded text-gray-600">Superia Premium</span>
+                </div>
+            </div>
+
+            <!-- Post 5 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5]">
+                    <!-- REPLACE SRC WITH YOUR INSTAGRAM PHOTO 5 -->
+                    <img src="https://images.unsplash.com/photo-1517436073-3b1b11d99903?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coreltex Photo 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Minimal Architecture</h3>
+                        <p class="text-sm text-gray-500 mt-1">Camera: Fujifilm X-A1</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 rounded text-gray-600">Acros B&W</span>
+                </div>
+            </div>
+
+            <!-- Post 6 -->
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5]">
+                    <!-- REPLACE SRC WITH YOUR INSTAGRAM PHOTO 6 -->
+                    <img src="https://images.unsplash.com/photo-1524311583145-d5593bd2501a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coreltex Photo 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-semibold text-lg">Cafe Shadows</h3>
+                        <p class="text-sm text-gray-500 mt-1">Camera: Fujifilm X-M4</p>
+                    </div>
+                    <span class="text-xs font-medium px-2 py-1 bg-gray-100 rounded text-gray-600">Classic Negative</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Film Simulation Suggestions -->
+    <section id="suggestions" class="bg-white py-24 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+            <h2 class="text-4xl font-serif mb-6">Current Recipe Suggestions</h2>
+            <p class="text-gray-500 mb-12">Fine-tune your X-M4 and X-A1 to get these signature looks straight out of camera.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="p-8 border border-gray-100 rounded-xl hover:shadow-lg transition">
+                    <h4 class="font-serif text-2xl mb-2">Everyday Negative</h4>
+                    <p class="text-sm text-gray-500 mb-4">Perfect for overcast days and urban environments.</p>
+                    <ul class="text-sm space-y-2 text-gray-700">
+                        <li><span class="font-medium">Base:</span> Classic Negative</li>
+                        <li><span class="font-medium">Dynamic Range:</span> DR400</li>
+                        <li><span class="font-medium">Highlight:</span> -1.0</li>
+                        <li><span class="font-medium">Shadow:</span> +1.5</li>
+                        <li><span class="font-medium">Color:</span> -2</li>
+                    </ul>
+                </div>
+                
+                <div class="p-8 border border-gray-100 rounded-xl hover:shadow-lg transition">
+                    <h4 class="font-serif text-2xl mb-2">Warm Summer</h4>
+                    <p class="text-sm text-gray-500 mb-4">Golden hour portraits and deep, rich greens.</p>
+                    <ul class="text-sm space-y-2 text-gray-700">
+                        <li><span class="font-medium">Base:</span> Classic Chrome</li>
+                        <li><span class="font-medium">Dynamic Range:</span> DR200</li>
+                        <li><span class="font-medium">Highlight:</span> 0</li>
+                        <li><span class="font-medium">Shadow:</span> -1.0</li>
+                        <li><span class="font-medium">White Balance:</span> Auto, R: +3, B: -4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 text-center">
+        <p class="text-xl font-bold tracking-widest mb-4">CORELTEX.</p>
+        <p class="text-gray-400 text-sm">© 2026 Coreltex Photography. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
