@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORELTEX | Photography & Recipes</title>
+    <title>CORELTEX | Photography Portfolio</title>
     
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,71 +22,93 @@
                         serif: ['Playfair Display', 'serif'],
                     },
                     colors: {
-                        chrome: '#d4d4d8', /* Zinc 300 - Silver/Chrome look */
-                        chromeDark: '#a1a1aa', /* Zinc 400 */
+                        chrome: '#d4d4d8', 
+                        chromeDark: '#a1a1aa',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-black text-chrome antialiased selection:bg-chrome selection:text-black">
+<body class="bg-zinc-950 text-chrome antialiased selection:bg-chrome selection:text-black">
 
     <!-- Navigation Bar -->
-    <nav class="fixed w-full flex items-center justify-between px-6 lg:px-12 py-4 bg-black/80 backdrop-blur-md z-50 border-b border-zinc-900">
+    <nav class="fixed w-full flex items-center justify-between px-6 lg:px-12 py-5 bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-900">
         <div class="flex items-center space-x-12">
             <a href="#" class="text-xl font-bold tracking-widest text-white">CORELTEX.</a>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-zinc-500">
-                <a href="#" class="hover:text-white transition">Recipes</a>
-                <a href="#" class="hover:text-white transition">Cameras</a>
-                <a href="#gallery" class="hover:text-white transition">Gallery</a>
+                <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
+                <a href="#suggestions" class="hover:text-white transition">Recipes</a>
             </div>
         </div>
         <div class="flex items-center space-x-4">
-            <a href="https://instagram.com/coreltex" target="_blank" class="bg-chrome text-black text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-white transition shadow-[0_0_15px_rgba(212,212,216,0.3)]">
-                Follow @coreltex
+            <a href="https://instagram.com/coreltex" target="_blank" class="bg-chrome text-black text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-white transition shadow-[0_0_15px_rgba(212,212,216,0.2)]">
+                Instagram
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <!-- Updated with a new, dark, moody aesthetic background image -->
-    <header class="relative h-screen flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519885277449-12eee5564d68?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
-        <!-- Darker overlay for the black theme -->
-        <div class="absolute inset-0 bg-black/70"></div>
-        
-        <div class="relative z-10 px-6 lg:px-24 max-w-4xl">
-            <h1 class="text-6xl md:text-8xl font-serif text-white tracking-tight mb-4">Find your look.</h1>
-            <p class="text-lg md:text-xl text-zinc-400 mb-8 max-w-lg font-light">
-                Discover custom Fujifilm recipes and visual stories. Shot entirely on X-M4, X-A1, and X-M5.
-            </p>
-            <div class="flex items-center space-x-4">
-                <a href="#gallery" class="bg-transparent border border-chrome text-chrome text-sm font-semibold px-8 py-3 rounded-full hover:bg-chrome hover:text-black transition">
-                    Explore Gallery
-                </a>
-                <a href="#suggestions" class="bg-chrome text-black text-sm font-semibold px-8 py-3 rounded-full hover:bg-white transition shadow-[0_0_15px_rgba(212,212,216,0.2)]">
-                    Film Suggestions
-                </a>
+    <!-- Split-Screen Hero & Immediate Gallery -->
+    <header class="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Left Side: Intro & Context -->
+            <div class="relative z-10 order-2 lg:order-1">
+                <h1 class="text-5xl md:text-7xl font-serif text-white tracking-tight mb-6">Find your look.</h1>
+                <p class="text-lg text-zinc-400 mb-8 max-w-md font-light leading-relaxed">
+                    Custom Fujifilm recipes and visual narratives. Shot entirely on X-M4, X-A1, and X-M5.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <a href="#portfolio" class="bg-transparent border border-chrome text-chrome text-sm font-semibold px-8 py-3 rounded-full hover:bg-chrome hover:text-black transition">
+                        View Full Gallery
+                    </a>
+                </div>
+                
+                <div class="mt-16 pt-8 border-t border-zinc-900 flex gap-8">
+                    <div>
+                        <p class="text-xs text-zinc-600 tracking-widest uppercase mb-1">Focus</p>
+                        <p class="text-sm text-zinc-300 font-medium">Urban & Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-zinc-600 tracking-widest uppercase mb-1">Tools</p>
+                        <p class="text-sm text-zinc-300 font-medium">Fujifilm X-Series</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-xs text-zinc-600 mt-8 tracking-widest uppercase">Built for Fujifilm Shooters</p>
+
+            <!-- Right Side: Immediate Visual Impact (First 4 Photos) -->
+            <div class="grid grid-cols-2 gap-4 lg:gap-6 order-1 lg:order-2 relative">
+                <!-- Soft background glow to highlight the images -->
+                <div class="absolute -inset-4 bg-gradient-to-tr from-zinc-800/20 to-transparent blur-2xl -z-10 rounded-full"></div>
+                
+                <!-- Shifts the left column down slightly for a modern masonry look -->
+                <div class="flex flex-col gap-4 lg:gap-6 pt-8">
+                    <img src="photo1.jpg" alt="Portfolio Image 1" class="w-full h-56 lg:h-72 object-cover rounded-xl border border-zinc-800 grayscale hover:grayscale-0 transition duration-500">
+                    <img src="photo3.jpg" alt="Portfolio Image 3" class="w-full h-56 lg:h-72 object-cover rounded-xl border border-zinc-800 grayscale hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="flex flex-col gap-4 lg:gap-6">
+                    <img src="photo2.jpg" alt="Portfolio Image 2" class="w-full h-56 lg:h-72 object-cover rounded-xl border border-zinc-800 grayscale hover:grayscale-0 transition duration-500">
+                    <img src="photo4.jpg" alt="Portfolio Image 4" class="w-full h-56 lg:h-72 object-cover rounded-xl border border-zinc-800 grayscale hover:grayscale-0 transition duration-500">
+                </div>
+            </div>
+            
         </div>
     </header>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 bg-black">
-        <h2 class="text-4xl font-serif text-center mb-16 text-white">Latest from Instagram</h2>
+    <!-- Full Portfolio Section -->
+    <section id="portfolio" class="max-w-7xl mx-auto px-6 lg:px-12 py-24 border-t border-zinc-900">
+        <h2 class="text-3xl font-serif mb-12 text-white">Complete Archive</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
             <!-- Post 1 -->
             <div class="group cursor-pointer">
                 <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo1.jpg" alt="Coreltex Photo 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out grayscale hover:grayscale-0">
+                    <img src="photo1.jpg" alt="Urban Chrome" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg text-white">Urban Chrome</h3>
-                        <p class="text-sm text-zinc-500 mt-1">Camera: Fujifilm X-M4</p>
+                        <p class="text-sm text-zinc-500 mt-1">X-M4</p>
                     </div>
                     <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Chrome</span>
                 </div>
@@ -95,12 +117,12 @@
             <!-- Post 2 -->
             <div class="group cursor-pointer">
                 <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo2.jpg" alt="Coreltex Photo 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out grayscale hover:grayscale-0">
+                    <img src="photo2.jpg" alt="Night Walk" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg text-white">Night Walk</h3>
-                        <p class="text-sm text-zinc-500 mt-1">Camera: Fujifilm X-A1</p>
+                        <p class="text-sm text-zinc-500 mt-1">X-A1</p>
                     </div>
                     <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">CineStill 800T</span>
                 </div>
@@ -109,40 +131,40 @@
             <!-- Post 3 -->
             <div class="group cursor-pointer">
                 <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo3.jpg" alt="Coreltex Photo 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out grayscale hover:grayscale-0">
+                    <img src="photo3.jpg" alt="Golden Hour" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg text-white">Golden Hour</h3>
-                        <p class="text-sm text-zinc-500 mt-1">Camera: Fujifilm X-M4</p>
+                        <p class="text-sm text-zinc-500 mt-1">X-M4</p>
                     </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Kodak Portra 400</span>
+                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Kodak Portra</span>
                 </div>
             </div>
 
             <!-- Post 4 -->
             <div class="group cursor-pointer">
                 <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo4.jpg" alt="Coreltex Photo 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out grayscale hover:grayscale-0">
+                    <img src="photo4.jpg" alt="Moody Greens" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg text-white">Moody Greens</h3>
-                        <p class="text-sm text-zinc-500 mt-1">Camera: Fujifilm X-M5</p>
+                        <p class="text-sm text-zinc-500 mt-1">X-M5</p>
                     </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Superia Premium</span>
+                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Superia</span>
                 </div>
             </div>
 
             <!-- Post 5 -->
             <div class="group cursor-pointer">
                 <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo5.jpg" alt="Coreltex Photo 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out grayscale hover:grayscale-0">
+                    <img src="photo5.jpg" alt="Minimal Architecture" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg text-white">Minimal Architecture</h3>
-                        <p class="text-sm text-zinc-500 mt-1">Camera: Fujifilm X-A1</p>
+                        <p class="text-sm text-zinc-500 mt-1">X-A1</p>
                     </div>
                     <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Acros B&W</span>
                 </div>
@@ -151,28 +173,27 @@
             <!-- Post 6 -->
             <div class="group cursor-pointer">
                 <div class="overflow-hidden rounded-lg mb-4 aspect-[4/5] border border-zinc-900">
-                    <img src="photo6.jpg" alt="Coreltex Photo 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out grayscale hover:grayscale-0">
+                    <img src="photo6.jpg" alt="Cafe Shadows" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                 </div>
                 <div class="flex justify-between items-start">
                     <div>
                         <h3 class="font-semibold text-lg text-white">Cafe Shadows</h3>
-                        <p class="text-sm text-zinc-500 mt-1">Camera: Fujifilm X-M4</p>
+                        <p class="text-sm text-zinc-500 mt-1">X-M4</p>
                     </div>
-                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Negative</span>
+                    <span class="text-xs font-medium px-2 py-1 bg-zinc-900 border border-zinc-800 rounded text-zinc-400">Classic Neg</span>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Film Simulation Suggestions -->
-    <section id="suggestions" class="bg-zinc-950 py-24 border-t border-zinc-900">
+    <section id="suggestions" class="bg-[#0a0a0a] py-24 border-t border-zinc-900">
         <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-            <h2 class="text-4xl font-serif mb-6 text-white">Current Recipe Suggestions</h2>
-            <p class="text-zinc-500 mb-12">Fine-tune your X-M4 and X-A1 to get these signature looks straight out of camera.</p>
+            <h2 class="text-3xl font-serif mb-6 text-white">Current Recipe Suggestions</h2>
+            <p class="text-zinc-500 mb-12">Signature configurations for the X-Series sensors.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="p-8 border border-zinc-800 bg-black rounded-xl hover:border-chrome transition">
+                <div class="p-8 border border-zinc-800 bg-zinc-950 rounded-xl hover:border-chrome transition">
                     <h4 class="font-serif text-2xl mb-2 text-white">Everyday Negative</h4>
                     <p class="text-sm text-zinc-500 mb-4">Perfect for overcast days and urban environments.</p>
                     <ul class="text-sm space-y-2 text-zinc-400">
@@ -180,11 +201,10 @@
                         <li><span class="font-medium text-chrome">Dynamic Range:</span> DR400</li>
                         <li><span class="font-medium text-chrome">Highlight:</span> -1.0</li>
                         <li><span class="font-medium text-chrome">Shadow:</span> +1.5</li>
-                        <li><span class="font-medium text-chrome">Color:</span> -2</li>
                     </ul>
                 </div>
                 
-                <div class="p-8 border border-zinc-800 bg-black rounded-xl hover:border-chrome transition">
+                <div class="p-8 border border-zinc-800 bg-zinc-950 rounded-xl hover:border-chrome transition">
                     <h4 class="font-serif text-2xl mb-2 text-white">Warm Summer</h4>
                     <p class="text-sm text-zinc-500 mb-4">Golden hour portraits and deep, rich greens.</p>
                     <ul class="text-sm space-y-2 text-zinc-400">
@@ -192,17 +212,15 @@
                         <li><span class="font-medium text-chrome">Dynamic Range:</span> DR200</li>
                         <li><span class="font-medium text-chrome">Highlight:</span> 0</li>
                         <li><span class="font-medium text-chrome">Shadow:</span> -1.0</li>
-                        <li><span class="font-medium text-chrome">White Balance:</span> Auto, R: +3, B: -4</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-chrome py-12 text-center border-t border-zinc-900">
+    <footer class="bg-zinc-950 text-chrome py-12 text-center border-t border-zinc-900">
         <p class="text-xl font-bold tracking-widest mb-4 text-white">CORELTEX.</p>
-        <p class="text-zinc-600 text-sm">© 2026 Coreltex Photography. All rights reserved.</p>
+        <p class="text-zinc-600 text-sm">© 2026 Coreltex Photography.</p>
     </footer>
 
 </body>
